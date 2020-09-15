@@ -1,0 +1,84 @@
+$base-color-container-1: red;
+$base-color-container-2: blue;
+
+
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
+    grid-template-rows: (100px 100px);
+    gap: 1rem;
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
+    grid-template-rows: (100px 100px);
+    gap: 1rem;
+}
+
+//letter color:
+.color-box-text {
+    color: white;
+}
+
+//RED BOXES:
+.container-1 .box-darken-4 {
+    background-color: darken($color: $base-color-container-1, $amount: 20%);
+}
+.container-1 .box-darken-3 {
+    background-color: darken($color: $base-color-container-1, $amount: 15%);
+}
+.container-1 .box-darken-2 {
+    background-color: darken($color: $base-color-container-1, $amount: 10%);
+}
+.container-1 .box-darken-1 {
+    background-color: darken($color: $base-color-container-1, $amount: 5%);
+}
+
+//box with the base color:
+
+.container-1 .box-base-color {
+    background-color: $base-color-container-1;
+}
+.container-1 .box-lighten-1 {
+    background-color: lighten($color: $base-color-container-1, $amount: 10%);
+}
+.container-1 .box-lighten-2 {
+    background-color: lighten($color: $base-color-container-1, $amount: 20%);
+}
+.container-1 .box-lighten-3 {
+    background-color: lighten($color: $base-color-container-1, $amount: 30%);
+}
+.container-1 .box-lighten-4 {
+    background-color: lighten($color: $base-color-container-1, $amount: 40%);
+}
+
+// //BLUE BOXES:
+.container-2 .box-darken-4 {
+    background-color: darken($color: $base-color-container-2, $amount: 20%);
+}
+.container-2 .box-darken-3 {
+    background-color: darken($color: $base-color-container-2, $amount: 15%);
+}
+.container-2 .box-darken-2 {
+    background-color: darken($color: $base-color-container-2, $amount: 10%);
+}
+.container-2 .box-darken-1 {
+    background-color: darken($color: $base-color-container-2, $amount: 5%);
+}
+.container-2 .box-base-color {
+    background-color: $base-color-container-2;
+}
+.container-2 .box-lighten-1 {
+    background-color: lighten($color: $base-color-container-2, $amount: 10%);
+}
+.container-2 .box-lighten-2 {
+    background-color: lighten($color: $base-color-container-2, $amount: 20%);
+}
+.container-2 .box-lighten-3 {
+    background-color: lighten($color: $base-color-container-2, $amount: 30%);
+}
+.container-2 .box-lighten-4 {
+    background-color: lighten($color: $base-color-container-2, $amount: 40%);
+}
+
