@@ -1,153 +1,148 @@
-$base-color-container-1: red;
-$base-color-container-2: blue;
-$base-color-container-3: green;
-
-$base-letter-container: white;
-$base-letter-container_1: cyan;
-$base-letter-container-2: yellow;
-$base-letter-container-3: mediumorchid;
-
-
+//RED BOXES:
 .container-1 {
-    display: grid;
     grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
     grid-template-rows: (100px 100px);
+    display: grid;
     gap: 1rem;
+    $base-color: red;
+    $base-letter: cyan;
+
+    .box-darken-4 {
+        background-color: darken($color: $base-color, $amount: 20%);
+        color:darken($color: $base-letter, $amount: 20%);
+        border-radius: 5px;
+    }
+    .box-darken-3 {
+        background-color: darken($color: $base-color, $amount: 15%);
+        color:darken($color: $base-letter, $amount: 15%)
+    }
+    .box-darken-2 {
+        background-color: darken($color: $base-color, $amount: 10%);
+        color:darken($color: $base-letter, $amount: 10%)
+    }
+    .box-darken-1 {
+        background-color: darken($color: $base-color, $amount: 5%);
+        color:darken($color: $base-letter, $amount: 5%)
+    }.box-base-color {
+        background-color: $base-color;
+        color:white;
+    }
+    .box-lighten-1 {
+        background-color: lighten($color: $base-color, $amount: 10%);
+        color:lighten($color: $base-letter, $amount: 10%)
+    }
+    .box-lighten-2 {
+        background-color: lighten($color: $base-color, $amount: 20%);
+        color:lighten($color: $base-letter, $amount: 20%)
+    }
+    .box-lighten-3 {
+        background-color: lighten($color: $base-color, $amount: 30%);
+        color:lighten($color: $base-letter, $amount: 30%)
+    }
+    .box-lighten-4 {
+        background-color: lighten($color: $base-color, $amount: 40%);
+        color:lighten($color: $base-letter, $amount: 40%)
+    }
 }
 
+//BLUE BOXES:
 .container-2 {
     display: grid;
     grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
     grid-template-rows: (100px 100px);
     gap: 1rem;
+    $base-color: blue;
+    $base-letter: yellow;
+
+    .box-darken-4 {
+        background-color: darken($color: $base-color, $amount: 20%);
+        color:darken($color: $base-letter, $amount: 20%);
+    }
+    .box-darken-3 {
+        background-color: darken($color: $base-color, $amount: 15%);
+        color:darken($color: $base-letter, $amount: 15%);
+    }
+    .box-darken-2 {
+        background-color: darken($color: $base-color, $amount: 10%);
+        color:darken($color: $base-letter, $amount: 10%);
+    }
+    .box-darken-1 {
+        background-color: darken($color: $base-color, $amount: 5%);
+        color:darken($color: $base-letter, $amount: 5%);
+    }
+    .box-base-color {
+        background-color: $base-color;
+        color:white;
+    }
+    .box-lighten-1 {
+        background-color: lighten($color: $base-color, $amount: 10%);
+        color:lighten($color: $base-letter, $amount: 10%);
+    }
+    .box-lighten-2 {
+        background-color: lighten($color: $base-color, $amount: 20%);
+        color:lighten($color: $base-letter, $amount: 20%);
+    }
+    .box-lighten-3 {
+        background-color: lighten($color: $base-color, $amount: 30%);
+        color:lighten($color: $base-letter, $amount: 30%);
+    }
+    .box-lighten-4 {
+        background-color: lighten($color: $base-color, $amount: 40%);
+        color:lighten($color: $base-letter, $amount: 40%);
+    }
 }
 
+//GREEN BOXES:
 .container-3 {
     display: grid;
     grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
     grid-template-rows: (100px 100px);
     gap: 1rem;
-    
-}
+    $base-color: green;
+    $base-letter: mediumorchid;
 
-//letter color:
-
-//RED BOXES:
-.container-1 .box-darken-4 {
-    background-color: darken($color: $base-color-container-1, $amount: 20%);
-    color:darken($color: $base-letter-container-1, $amount: 20%);
-    border-radius: 5px;
-    place-content:center, center;
+    .box-darken-4 {
+        background-color: darken($color: $base-color, $amount: 20%);
+        color:darken($color: $base-letter, $amount: 20%);
+    }
+    .box-darken-3 {
+        background-color: darken($color: $base-color, $amount: 15%);
+        color:darken($color: $base-letter, $amount: 15%);
+    }
+    .box-darken-2 {
+        background-color: darken($color: $base-color, $amount: 10%);
+        color:darken($color: $base-letter, $amount: 10%);
+    }
+    .box-darken-1 {
+        background-color: darken($color: $base-color, $amount: 5%);
+        color:darken($color: $base-letter, $amount: 5%);
+    }
+    .box-base-color {
+        background-color: $base-color;
+        color:white;
+    }
+    .box-lighten-1 {
+        background-color: lighten($color: $base-color, $amount: 10%);
+        color:lighten($color: $base-letter, $amount: 10%);
+    }
+    .box-lighten-2 {
+        background-color: lighten($color: $base-color, $amount: 20%);
+        color:lighten($color: $base-letter, $amount: 20%);
+    }
+    .box-lighten-3 {
+        background-color: lighten($color: $base-color, $amount: 30%);
+        color:lighten($color: $base-letter, $amount: 30%);
+    }
+    .box-lighten-4 {
+        background-color: lighten($color: $base-color, $amount: 40%);
+        color:lighten($color: $base-letter, $amount: 40%);
+    }
 }
-.container-1 .box-darken-3 {
-    background-color: darken($color: $base-color-container-1, $amount: 15%);
-    color:darken($color: $base-letter-container-1, $amount: 15%)
-}
-.container-1 .box-darken-2 {
-    background-color: darken($color: $base-color-container-1, $amount: 10%);
-    color:darken($color: $base-letter-container-1, $amount: 10%)
-}
-.container-1 .box-darken-1 {
-    background-color: darken($color: $base-color-container-1, $amount: 5%);
-    color:darken($color: $base-letter-container-1, $amount: 5%)
-}
-.container-1 .box-base-color {
-    background-color: $base-color-container-1;
-    color:$base-letter-container;
-}
-.container-1 .box-lighten-1 {
-    background-color: lighten($color: $base-color-container-1, $amount: 10%);
-    color:lighten($color: $base-letter-container-1, $amount: 10%)
-}
-.container-1 .box-lighten-2 {
-    background-color: lighten($color: $base-color-container-1, $amount: 20%);
-    color:lighten($color: $base-letter-container-1, $amount: 20%)
-}
-.container-1 .box-lighten-3 {
-    background-color: lighten($color: $base-color-container-1, $amount: 30%);
-    color:lighten($color: $base-letter-container-1, $amount: 30%)
-}
-.container-1 .box-lighten-4 {
-    background-color: lighten($color: $base-color-container-1, $amount: 40%);
-    color:lighten($color: $base-letter-container-1, $amount: 40%)
 
 
 
-}
 
-// //BLUE BOXES:
-.container-2 .box-darken-4 {
-    background-color: darken($color: $base-color-container-2, $amount: 20%);
-    color:darken($color: $base-letter-container-2, $amount: 20%);
-}
-.container-2 .box-darken-3 {
-    background-color: darken($color: $base-color-container-2, $amount: 15%);
-    color:darken($color: $base-letter-container-2, $amount: 15%);
-}
-.container-2 .box-darken-2 {
-    background-color: darken($color: $base-color-container-2, $amount: 10%);
-    color:darken($color: $base-letter-container-2, $amount: 10%);
-}
-.container-2 .box-darken-1 {
-    background-color: darken($color: $base-color-container-2, $amount: 5%);
-    color:darken($color: $base-letter-container-2, $amount: 5%);
-}
-.container-2 .box-base-color {
-    background-color: $base-color-container-2;
-    color:$base-letter-container;
-}
-.container-2 .box-lighten-1 {
-    background-color: lighten($color: $base-color-container-2, $amount: 10%);
-    color:lighten($color: $base-letter-container-2, $amount: 10%);
-}
-.container-2 .box-lighten-2 {
-    background-color: lighten($color: $base-color-container-2, $amount: 20%);
-    color:lighten($color: $base-letter-container-2, $amount: 20%);
-}
-.container-2 .box-lighten-3 {
-    background-color: lighten($color: $base-color-container-2, $amount: 30%);
-    color:lighten($color: $base-letter-container-2, $amount: 30%);
-}
-.container-2 .box-lighten-4 {
-    background-color: lighten($color: $base-color-container-2, $amount: 40%);
-    color:lighten($color: $base-letter-container-2, $amount: 40%);
-}
 
-//GREEN BOXES:
-.container-3 .box-darken-4 {
-    background-color: darken($color: $base-color-container-3, $amount: 20%);
-    color:darken($color: $base-letter-container-3, $amount: 20%);
-}
-.container-3 .box-darken-3 {
-    background-color: darken($color: $base-color-container-3, $amount: 15%);
-    color:darken($color: $base-letter-container-3, $amount: 15%);
-}
-.container-3 .box-darken-2 {
-    background-color: darken($color: $base-color-container-3, $amount: 10%);
-    color:darken($color: $base-letter-container-3, $amount: 10%);
-}
-.container-3 .box-darken-1 {
-    background-color: darken($color: $base-color-container-3, $amount: 5%);
-    color:darken($color: $base-letter-container-3, $amount: 5%);
-}
-.container-3 .box-base-color {
-    background-color: $base-color-container-3;
-    color:$base-letter-container;
-}
-.container-3 .box-lighten-1 {
-    background-color: lighten($color: $base-color-container-3, $amount: 10%);
-    color:lighten($color: $base-letter-container-3, $amount: 10%);
-}
-.container-3 .box-lighten-2 {
-    background-color: lighten($color: $base-color-container-3, $amount: 20%);
-    color:lighten($color: $base-letter-container-3, $amount: 20%);
-}
-.container-3 .box-lighten-3 {
-    background-color: lighten($color: $base-color-container-3, $amount: 30%);
-    color:lighten($color: $base-letter-container-3, $amount: 30%);
-}
-.container-3 .box-lighten-4 {
-    background-color: lighten($color: $base-color-container-3, $amount: 40%);
-    color:lighten($color: $base-letter-container-3, $amount: 40%);
-}
+
+
 

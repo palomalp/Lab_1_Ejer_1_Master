@@ -1,8 +1,45 @@
 .container-1 {
-  display: grid;
   grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
   grid-template-rows: 100px 100px;
+  display: grid;
   gap: 1rem;
+}
+.container-1 .box-darken-4 {
+  background-color: #990000;
+  color: #009999;
+  border-radius: 5px;
+}
+.container-1 .box-darken-3 {
+  background-color: #b30000;
+  color: #00b3b3;
+}
+.container-1 .box-darken-2 {
+  background-color: #cc0000;
+  color: #00cccc;
+}
+.container-1 .box-darken-1 {
+  background-color: #e60000;
+  color: #00e6e6;
+}
+.container-1 .box-base-color {
+  background-color: red;
+  color: white;
+}
+.container-1 .box-lighten-1 {
+  background-color: #ff3333;
+  color: #33ffff;
+}
+.container-1 .box-lighten-2 {
+  background-color: #ff6666;
+  color: #66ffff;
+}
+.container-1 .box-lighten-3 {
+  background-color: #ff9999;
+  color: #99ffff;
+}
+.container-1 .box-lighten-4 {
+  background-color: #ffcccc;
+  color: #ccffff;
 }
 
 .container-2 {
@@ -11,6 +48,42 @@
   grid-template-rows: 100px 100px;
   gap: 1rem;
 }
+.container-2 .box-darken-4 {
+  background-color: #000099;
+  color: #999900;
+}
+.container-2 .box-darken-3 {
+  background-color: #0000b3;
+  color: #b3b300;
+}
+.container-2 .box-darken-2 {
+  background-color: #0000cc;
+  color: #cccc00;
+}
+.container-2 .box-darken-1 {
+  background-color: #0000e6;
+  color: #e6e600;
+}
+.container-2 .box-base-color {
+  background-color: blue;
+  color: white;
+}
+.container-2 .box-lighten-1 {
+  background-color: #3333ff;
+  color: #ffff33;
+}
+.container-2 .box-lighten-2 {
+  background-color: #6666ff;
+  color: #ffff66;
+}
+.container-2 .box-lighten-3 {
+  background-color: #9999ff;
+  color: #ffff99;
+}
+.container-2 .box-lighten-4 {
+  background-color: #ccccff;
+  color: #ffffcc;
+}
 
 .container-3 {
   display: grid;
@@ -18,139 +91,38 @@
   grid-template-rows: 100px 100px;
   gap: 1rem;
 }
-
-.container-1 .box-darken-4 {
-  background-color: #990000;
-  color: #009999;
-  border-radius: 5px;
-  place-content: center, center;
-}
-
-.container-1 .box-darken-3 {
-  background-color: #b30000;
-  color: #00b3b3;
-}
-
-.container-1 .box-darken-2 {
-  background-color: #cc0000;
-  color: #00cccc;
-}
-
-.container-1 .box-darken-1 {
-  background-color: #e60000;
-  color: #00e6e6;
-}
-
-.container-1 .box-base-color {
-  background-color: red;
-  color: white;
-}
-
-.container-1 .box-lighten-1 {
-  background-color: #ff3333;
-  color: #33ffff;
-}
-
-.container-1 .box-lighten-2 {
-  background-color: #ff6666;
-  color: #66ffff;
-}
-
-.container-1 .box-lighten-3 {
-  background-color: #ff9999;
-  color: #99ffff;
-}
-
-.container-1 .box-lighten-4 {
-  background-color: #ffcccc;
-  color: #ccffff;
-}
-
-.container-2 .box-darken-4 {
-  background-color: #000099;
-  color: #999900;
-}
-
-.container-2 .box-darken-3 {
-  background-color: #0000b3;
-  color: #b3b300;
-}
-
-.container-2 .box-darken-2 {
-  background-color: #0000cc;
-  color: #cccc00;
-}
-
-.container-2 .box-darken-1 {
-  background-color: #0000e6;
-  color: #e6e600;
-}
-
-.container-2 .box-base-color {
-  background-color: blue;
-  color: white;
-}
-
-.container-2 .box-lighten-1 {
-  background-color: #3333ff;
-  color: #ffff33;
-}
-
-.container-2 .box-lighten-2 {
-  background-color: #6666ff;
-  color: #ffff66;
-}
-
-.container-2 .box-lighten-3 {
-  background-color: #9999ff;
-  color: #ffff99;
-}
-
-.container-2 .box-lighten-4 {
-  background-color: #ccccff;
-  color: #ffffcc;
-}
-
 .container-3 .box-darken-4 {
   background-color: #001a00;
   color: #83289a;
 }
-
 .container-3 .box-darken-3 {
   background-color: #003400;
   color: #952dae;
 }
-
 .container-3 .box-darken-2 {
   background-color: #004d00;
   color: #a632c3;
 }
-
 .container-3 .box-darken-1 {
   background-color: #006700;
   color: #b241ce;
 }
-
 .container-3 .box-base-color {
   background-color: green;
   color: white;
 }
-
 .container-3 .box-lighten-1 {
   background-color: #00b300;
   color: #ca7edd;
 }
-
 .container-3 .box-lighten-2 {
   background-color: #00e600;
   color: #dba6e8;
 }
-
 .container-3 .box-lighten-3 {
   background-color: #1aff1a;
   color: #ebcff2;
 }
-
 .container-3 .box-lighten-4 {
   background-color: #4dff4d;
   color: #fcf7fd;
