@@ -1,143 +1,56 @@
-//RED BOXES:
-.container-1 {
-    grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
-    grid-template-rows: (100px 100px);
-    display: grid;
-    gap: 1rem;
-    $base-color: red;
-    $base-letter: cyan;
-
-    .box-darken-4 {
-        background-color: darken($color: $base-color, $amount: 20%);
-        color:darken($color: $base-letter, $amount: 20%);
-        border-radius: 5px;
-    }
-    .box-darken-3 {
-        background-color: darken($color: $base-color, $amount: 15%);
-        color:darken($color: $base-letter, $amount: 15%)
-    }
-    .box-darken-2 {
-        background-color: darken($color: $base-color, $amount: 10%);
-        color:darken($color: $base-letter, $amount: 10%)
-    }
-    .box-darken-1 {
-        background-color: darken($color: $base-color, $amount: 5%);
-        color:darken($color: $base-letter, $amount: 5%)
-    }.box-base-color {
-        background-color: $base-color;
-        color:white;
-    }
-    .box-lighten-1 {
-        background-color: lighten($color: $base-color, $amount: 10%);
-        color:lighten($color: $base-letter, $amount: 10%)
-    }
-    .box-lighten-2 {
-        background-color: lighten($color: $base-color, $amount: 20%);
-        color:lighten($color: $base-letter, $amount: 20%)
-    }
-    .box-lighten-3 {
-        background-color: lighten($color: $base-color, $amount: 30%);
-        color:lighten($color: $base-letter, $amount: 30%)
-    }
-    .box-lighten-4 {
-        background-color: lighten($color: $base-color, $amount: 40%);
-        color:lighten($color: $base-letter, $amount: 40%)
-    }
+.row {
+    margin: 20px;
 }
 
-//BLUE BOXES:
-.container-2 {
-    display: grid;
-    grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
-    grid-template-rows: (100px 100px);
-    gap: 1rem;
-    $base-color: blue;
-    $base-letter: yellow;
+//Realizo un @mixin como si fuese una función para poder optimizar código y no repetir el mismo código para los tres contenedores.
+@mixin styleContainers ($containerId, $base-color, $base-letter) {
 
-    .box-darken-4 {
-        background-color: darken($color: $base-color, $amount: 20%);
-        color:darken($color: $base-letter, $amount: 20%);
-    }
-    .box-darken-3 {
-        background-color: darken($color: $base-color, $amount: 15%);
-        color:darken($color: $base-letter, $amount: 15%);
-    }
-    .box-darken-2 {
-        background-color: darken($color: $base-color, $amount: 10%);
-        color:darken($color: $base-letter, $amount: 10%);
-    }
-    .box-darken-1 {
-        background-color: darken($color: $base-color, $amount: 5%);
-        color:darken($color: $base-letter, $amount: 5%);
-    }
-    .box-base-color {
-        background-color: $base-color;
-        color:white;
-    }
-    .box-lighten-1 {
-        background-color: lighten($color: $base-color, $amount: 10%);
-        color:lighten($color: $base-letter, $amount: 10%);
-    }
-    .box-lighten-2 {
-        background-color: lighten($color: $base-color, $amount: 20%);
-        color:lighten($color: $base-letter, $amount: 20%);
-    }
-    .box-lighten-3 {
-        background-color: lighten($color: $base-color, $amount: 30%);
-        color:lighten($color: $base-letter, $amount: 30%);
-    }
-    .box-lighten-4 {
-        background-color: lighten($color: $base-color, $amount: 40%);
-        color:lighten($color: $base-letter, $amount: 40%);
-    }
-}
+    //#{$containerId} se reemplaza por 1, 2 o 3. Esto se realiza cuando llamo al "mixin con @include (al final del código)
+    .container-#{$containerId} {
+        grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
+        grid-template-rows: 100px;
+        display: grid;
+        gap: 1rem;
+        text-align: center;
+        
+        $i: 0;
+        $amountDarken: 5%;
+        $amountLighten: 10%;
+        
+        @while $i <= 4  {
+            .box-darken-#{$i} {
+                background-color: darken($color: $base-color, $amount: $amountDarken);
+                color:darken($color: $base-letter, $amount: $amountDarken); 
+                border-radius: 5px; 
+                //con padding consigo que se center de forma vertical.
+                padding-top: 40%;
+            
+            }
+            $i: $i + 1;
+            $amountDarken: $amountDarken + 5%;
+        
+            .box-lighten-#{$i} {
+                background-color: lighten($color: $base-color, $amount: $amountLighten);
+                color:lighten($color: $base-letter, $amount: $amountLighten);
+                border-radius: 5px;
+                padding-top: 40%;
+            }
+            $amountLighten: $amountLighten + 10%;
 
-//GREEN BOXES:
-.container-3 {
-    display: grid;
-    grid-template-columns: repeat(4, 100px) 150px repeat(4, 100px);
-    grid-template-rows: (100px 100px);
-    gap: 1rem;
-    $base-color: green;
-    $base-letter: mediumorchid;
+                .box-base-color {
+                    background-color: $base-color;
+                    color:white;
+                    border-radius: 5px;
+                    padding-top: 25%;
+                }
+        }
+    }
+}    
 
-    .box-darken-4 {
-        background-color: darken($color: $base-color, $amount: 20%);
-        color:darken($color: $base-letter, $amount: 20%);
-    }
-    .box-darken-3 {
-        background-color: darken($color: $base-color, $amount: 15%);
-        color:darken($color: $base-letter, $amount: 15%);
-    }
-    .box-darken-2 {
-        background-color: darken($color: $base-color, $amount: 10%);
-        color:darken($color: $base-letter, $amount: 10%);
-    }
-    .box-darken-1 {
-        background-color: darken($color: $base-color, $amount: 5%);
-        color:darken($color: $base-letter, $amount: 5%);
-    }
-    .box-base-color {
-        background-color: $base-color;
-        color:white;
-    }
-    .box-lighten-1 {
-        background-color: lighten($color: $base-color, $amount: 10%);
-        color:lighten($color: $base-letter, $amount: 10%);
-    }
-    .box-lighten-2 {
-        background-color: lighten($color: $base-color, $amount: 20%);
-        color:lighten($color: $base-letter, $amount: 20%);
-    }
-    .box-lighten-3 {
-        background-color: lighten($color: $base-color, $amount: 30%);
-        color:lighten($color: $base-letter, $amount: 30%);
-    }
-    .box-lighten-4 {
-        background-color: lighten($color: $base-color, $amount: 40%);
-        color:lighten($color: $base-letter, $amount: 40%);
-    }
-}
+@include styleContainers(1, red, cornflowerblue);
+@include styleContainers(2, blue, yellow);
+@include styleContainers(3, green, mediumorchid);
+
 
 
 
