@@ -13,7 +13,8 @@
         gap: 1rem;
         text-align: center;
         
-        $i: 0;
+        //variables que uso para incrementar y decrementar. Aquí está desde donde parto.
+        $i: 1;
         $amountDarken: 5%;
         $amountLighten: 10%;
         
@@ -26,27 +27,32 @@
                 padding-top: 40%;
             
             }
-            $i: $i + 1;
-            $amountDarken: $amountDarken + 5%;
         
             .box-lighten-#{$i} {
                 background-color: lighten($color: $base-color, $amount: $amountLighten);
                 color:lighten($color: $base-letter, $amount: $amountLighten);
                 border-radius: 5px;
                 padding-top: 40%;
+    
             }
-            $amountLighten: $amountLighten + 10%;
-
+            
                 .box-base-color {
                     background-color: $base-color;
+                    //color de la letra:
                     color:white;
                     border-radius: 5px;
                     padding-top: 25%;
                 }
+
+                //update.
+                $i: $i + 1;
+                $amountDarken: $amountDarken + 5%;
+                $amountLighten: $amountLighten + 10%;
         }
     }
 }    
 
+//ejecuto mixin
 @include styleContainers(1, red, cornflowerblue);
 @include styleContainers(2, blue, yellow);
 @include styleContainers(3, green, mediumorchid);

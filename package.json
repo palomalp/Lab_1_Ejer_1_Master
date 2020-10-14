@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/palomalp/lab_modulo_1#readme",
   "dependencies": {
-    "sass": "^1.26.10"
+    "sass": "^1.26.11"
   }
 }
